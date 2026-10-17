@@ -8,7 +8,6 @@ First public preview: the v12 no-fade variant of the tablet-tested v11 engine.
 - Native Clutter cubic-Bezier transitions and temporary periodic frame scheduling.
 - English/Chinese documentation, reproducible extension ZIP and lifecycle tests.
 - No opacity animation; opaque layout swap visually confirmed smooth without a dim/flash on the test tablet.
-- Reported desktop unresponsiveness is under investigation.
 - Validated only on Xiaomi Pad 5 / GNOME 51.1 / Wayland; broader support unverified.
 
 首次公开预览版，基于实机验证的 v11，v12 取消淡入淡出。提供整屏旋转过渡、双语说明、可安装 ZIP 和

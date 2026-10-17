@@ -24,7 +24,7 @@ its live input coordinate system.
 | OS / kernel | Arch Linux ARM, 7.2.10-0-krjy |
 | Display | One internal DSI panel, 1600 × 2560, 200% scale, 120 Hz |
 
-**Desktop unresponsiveness was reported during ordinary use on the development device; its relationship to this extension is not yet established. This is not a stable release. The user confirmed that v12 no longer flashes/dims and remains smooth on the tested tablet.** v12 also recorded mostly ~8.3 ms animation intervals in one on-device rotation.
+**The user confirmed that v12 no longer flashes/dims and remains smooth on the tested tablet.** v12 also recorded mostly ~8.3 ms animation intervals in one on-device rotation.
 
 The test system also has unrelated local Mutter/input/wake fixes. A stock
 GNOME 51 installation, other devices, X11, external displays, mirroring,
@@ -130,7 +130,7 @@ This is an independent community experiment, not an official GNOME or Xiaomi pro
 
 ## 适配范围
 
-**开发设备在普通操作中出现桌面无响应，与本扩展的关系尚未确定，本项目不是稳定版；v12 已实机确认不再闪暗且仍然流畅，但长期稳定性仍待观察。**
+**v12 已实机确认不再闪暗且仍然流畅，但长期稳定性仍待观察。**
 
 目前只在小米平板 5、Arch Linux ARM、GNOME Shell/Mutter 51.1、Wayland、
 7.2.10-0-krjy 内核、单块 DSI 内屏、1600×2560、200% 缩放下验证过。

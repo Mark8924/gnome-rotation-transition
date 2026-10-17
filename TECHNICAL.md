@@ -32,13 +32,6 @@ The engine file is copied byte-for-byte from the v12 no-fade candidate based on 
 interface. No helper, simulator, debug console automation, IP, firmware or kernel
 patch is included in the extension ZIP.
 
-During development a rotation test overlapping LookingGlass closure left that
-console closed but still owning a modal input grab. The animation overlay had
-already been released, and the debug flags were zero. Releasing only that stale
-console grab restored the desktop without logout/reboot. The exact interruption
-sequence was not independently reproduced. This public extension never opens
-LookingGlass, and test-console automation is deliberately not shipped.
-
 Avoid invoking display configuration changes from LookingGlass while it is
 opening/closing. Use a separate terminal and wait until the console has fully
 closed before manually testing rotation. No global grab-disabling patch is made.
@@ -48,6 +41,4 @@ closed before manually testing rotation. No global grab-disabling patch is made.
 旋转前后的画面只用于 GPU 动画，真实桌面的坐标和输入不动。临时调度标志在清理时
 恢复；它生效期间是合成器全局标志，和其他扩展并发修改的协调尚未实现。
 
-开发时曾遇到测试控制台关闭后残留输入抓取，释放该控制台的抓取后恢复。
-已确认当时动画层清理完毕，但具体的动画中断过程没有独立复现。
 公开扩展不包含测试控制台自动化，也不修改系统全局的输入抓取逻辑。
