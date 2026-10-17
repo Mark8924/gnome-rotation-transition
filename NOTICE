@@ -1,0 +1,21 @@
+GNOME Rotation Transition
+Copyright (C) 2026 Mark8924 and contributors
+Original extension code: GNU GPL version 3 or later. See LICENSE.
+
+The animation timing (90 degrees: 283 ms, 180 degrees: 383 ms), cubic Bezier
+control points and crossfade timing are based on Android Open Source Project
+screen rotation resource definitions. No Android runtime or framework code is
+bundled. These references are distributed by AOSP under Apache License 2.0:
+
+Copyright 2010, The Android Open Source Project
+Copyright (C) 2021 The Android Open Source Project
+See LICENSE.apache-2.0
+https://www.apache.org/licenses/LICENSE-2.0
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/res/res/anim/screen_rotate_plus_90_enter.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/res/res/anim/screen_rotate_plus_90_exit.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/res/res/interpolator/screen_rotation.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/res/res/interpolator/screen_rotation_alpha_in.xml
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/core/res/res/interpolator/screen_rotation_alpha_out.xml
+
+GNOME Shell, Mutter and Clutter are separately installed system dependencies;
+their source code and device-specific kernel/firmware are not bundled here.

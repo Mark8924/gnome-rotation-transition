@@ -1,0 +1,11 @@
+{
+  "uuid": "nabu-rotation-transition@mipad5.local",
+  "name": "Smooth Screen Rotation",
+  "description": "Android-style screen rotation transitions for GNOME Shell. Experimental: tested on Xiaomi Pad 5 with GNOME 51.",
+  "shell-version": [
+    "51"
+  ],
+  "version": 12,
+  "version-name": "0.1.0-preview.1",
+  "url": "https://github.com/Mark8924/gnome-rotation-transition"
+}
