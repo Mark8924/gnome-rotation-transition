@@ -9,7 +9,7 @@ orientation, an incompatible monitor layout or disabled animation skips the effe
 
 `monitors-changed` queues one `before-paint` capture of the newly allocated layout,
 then prewarms the image for one paint. Native Clutter transitions rotate
-fixed-size image actors. v12 removes both opacity transitions and switches the visible layout at half of the eased rotation. The no-fade variant is not yet visually verified. Neither `Main.uiGroup` nor the live window groups are
+fixed-size image actors. v12 removes both opacity transitions and switches the visible layout at half of the eased rotation. The user confirmed that v12 does not flash/dim and remains smooth. Neither `Main.uiGroup` nor the live window groups are
 transformed or hidden. The overlay is nonreactive and never takes a modal grab.
 
 Cleanup disconnects paint callbacks, cancels pending sources, destroys the overlay,

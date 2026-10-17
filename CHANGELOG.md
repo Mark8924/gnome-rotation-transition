@@ -7,7 +7,7 @@ First public preview: the v12 no-fade variant of the tablet-tested v11 engine.
 - Whole-screen portrait/landscape transition using isolated GPU images.
 - Native Clutter cubic-Bezier transitions and temporary periodic frame scheduling.
 - English/Chinese documentation, reproducible extension ZIP and lifecycle tests.
-- No opacity animation; opaque layout swap is awaiting visual verification.
+- No opacity animation; opaque layout swap visually confirmed smooth without a dim/flash on the test tablet.
 - Reported desktop unresponsiveness is under investigation.
 - Validated only on Xiaomi Pad 5 / GNOME 51.1 / Wayland; broader support unverified.
 

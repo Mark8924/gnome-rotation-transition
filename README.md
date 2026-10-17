@@ -24,7 +24,7 @@ its live input coordinate system.
 | OS / kernel | Arch Linux ARM, 7.2.10-0-krjy |
 | Display | One internal DSI panel, 1600 × 2560, 200% scale, 120 Hz |
 
-**Desktop unresponsiveness after rotation is under investigation. This is not a stable release. The no-fade v12 layout switch has not yet received on-device visual confirmation.** The performance measurements below are from its v11 predecessor.
+**Desktop unresponsiveness was reported during ordinary use on the development device; its relationship to this extension is not yet established. This is not a stable release. The user confirmed that v12 no longer flashes/dims and remains smooth on the tested tablet.** v12 also recorded mostly ~8.3 ms animation intervals in one on-device rotation.
 
 The test system also has unrelated local Mutter/input/wake fixes. A stock
 GNOME 51 installation, other devices, X11, external displays, mirroring,
@@ -45,7 +45,7 @@ Log out and back in, then enable:
 gnome-extensions enable nabu-rotation-transition@mipad5.local
 ```
 
-Alternatively, clone the source and run `./install.sh` (Python 3 required).
+Alternatively, clone the source and run `sh install.sh` (Python 3 required).
 Updating an already loaded extension also requires a fresh GNOME session.
 The UUID is retained for compatibility with the original Xiaomi Pad 5 installation.
 
@@ -102,7 +102,7 @@ python3 build.py
 ```
 
 The lifecycle tests use mocks: they verify cleanup and failure handling, not real
-GPU output. The v12 no-fade variant builds on the tablet-tested v11 engine. The new opaque layout switch is still being evaluated.
+GPU output. The v12 no-fade variant builds on the tablet-tested v11 engine. The user visually confirmed the opaque layout switch; long-term stability is still being evaluated.
 See [technical notes](TECHNICAL.md) and [release notes](CHANGELOG.md).
 
 Report your GNOME/Mutter versions, device, GPU/driver, session type, monitor count,
@@ -130,7 +130,7 @@ This is an independent community experiment, not an official GNOME or Xiaomi pro
 
 ## 适配范围
 
-**旋转后桌面无响应的问题仍在排查，本项目不是稳定版；v12 无淡出切换尚未完成实机确认。**
+**开发设备在普通操作中出现桌面无响应，与本扩展的关系尚未确定，本项目不是稳定版；v12 已实机确认不再闪暗且仍然流畅，但长期稳定性仍待观察。**
 
 目前只在小米平板 5、Arch Linux ARM、GNOME Shell/Mutter 51.1、Wayland、
 7.2.10-0-krjy 内核、单块 DSI 内屏、1600×2560、200% 缩放下验证过。
@@ -156,7 +156,7 @@ gnome-extensions install --force ~/Downloads/nabu-rotation-transition\@mipad5.lo
 gnome-extensions enable nabu-rotation-transition@mipad5.local
 ```
 
-也可以下载源码后运行 `./install.sh`，需要 Python 3。
+也可以下载源码后运行 `sh install.sh`，需要 Python 3。
 更新已加载的旧版后，同样需要注销再登录。UUID 保持不变，方便原有米板安装更新。
 
 关闭和卸载：
@@ -177,7 +177,7 @@ gnome-extensions uninstall nabu-rotation-transition@mipad5.local
 
 只在旋转期间捕获 GPU 画面，用 Clutter 原生动画做旋转与不透明切换。旋转时暂时绕开
 动态最大渲染耗时估计，结束后恢复；该标志在生效期间影响整个合成器，不是永久调度修改。
-这版在实机流畅的 v11 基础上取消透明度动画；v12 不透明布局切换的观感仍待验证，也需要更多设备、连续快速旋转和重负载验证。
+这版在实机流畅的 v11 基础上取消透明度动画；v12 不透明布局切换已获得实机观感确认，也需要更多设备、连续快速旋转和重负载验证。
 不抓取输入，不运行虚拟键盘，也不会把测试控制台或设备管理脚本安装到系统。
 
 遇到问题请提供设备、GNOME/Mutter 版本、驱动、分辨率/缩放和复现方法。
